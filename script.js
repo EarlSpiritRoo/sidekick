@@ -103,13 +103,17 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
     });
   });
 
-
-  function renderCookdineReplies() {
+  // Auto-run on load
+  function renderCookdineReplies(search = "") {
     const container = document.getElementById("cookdine-replies");
     container.innerHTML = "";
   
-    // Sort pinned first
-    const sorted = cookdineReplies.sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0));
+    const filtered = cookdineReplies.filter(reply =>
+      reply.subject.toLowerCase().includes(search.toLowerCase()) ||
+      reply.message.toLowerCase().includes(search.toLowerCase())
+    );
+  
+    const sorted = filtered.sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0));
   
     sorted.forEach(reply => {
       const wrapper = document.createElement("div");
@@ -130,11 +134,6 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
         setTimeout(() => (btn.textContent = "Copy"), 1000);
       });
   
-      wrapper.appendChild(title);
-      wrapper.appendChild(body);
-      wrapper.appendChild(btn);
-  
-      // Add visual flag for pinned
       if (reply.pinned) {
         const pin = document.createElement("span");
         pin.textContent = "📌";
@@ -142,18 +141,27 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
         title.prepend(pin);
       }
   
+      wrapper.appendChild(title);
+      wrapper.appendChild(body);
+      wrapper.appendChild(btn);
       container.appendChild(wrapper);
     });
   }
+  
   
   // Auto-run on load
   renderCookdineReplies();
 
-  function renderMarionReplies() {
+  function renderMarionReplies(search = "") {
     const container = document.getElementById("marion-replies");
     container.innerHTML = "";
   
-    const sorted = marionReplies.sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0));
+    const filtered = marionReplies.filter(reply =>
+      reply.subject.toLowerCase().includes(search.toLowerCase()) ||
+      reply.message.toLowerCase().includes(search.toLowerCase())
+    );
+  
+    const sorted = filtered.sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0));
   
     sorted.forEach(reply => {
       const wrapper = document.createElement("div");
@@ -187,9 +195,17 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
       container.appendChild(wrapper);
     });
   }
+  
 
   renderCookdineReplies();
 renderMarionReplies();
 
+document.getElementById("cookdine-search").addEventListener("input", (e) => {
+    renderCookdineReplies(e.target.value);
+  });
+  
+  document.getElementById("marion-search").addEventListener("input", (e) => {
+    renderMarionReplies(e.target.value);
+  });
   
   
