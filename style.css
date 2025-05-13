@@ -86,3 +86,33 @@ body {
     cursor: pointer;
   }
   
+  .reply-block {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    position: relative;
+  }
+  
+  .reply-block h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+  }
+  
+  .reply-block p {
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .reply-block .copy-btn {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    background: #333;
+    color: #fff;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+  }
+  
