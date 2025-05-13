@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sidekick</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h1>Sidekick</h1>
+      <nav>
+        <button class="nav-btn active" data-section="social">Social Tools</button>
+        <button class="nav-btn" data-section="cookdine">CookDineHost</button>
+        <button class="nav-btn" data-section="marion">Marion's Kitchen</button>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <!-- SOCIAL TOOLS SECTION -->
+      <section id="social" class="section active">
+        <h2>Share Recipe Tool</h2>
+        <p>Paste a recipe link and get 10 response variations instantly.</p>
+
+        <input type="text" id="recipe-link" placeholder="Paste recipe link here..." />
+        <button id="generate-replies">Generate Replies</button>
+
+        <div id="generated-replies"></div>
+      </section>
+
+      <!-- OTHER SECTIONS (EMPTY FOR NOW) -->
+      <section id="cookdine" class="section">
+        <h2>CookDineHost Responses</h2>
+      </section>
+
+      <section id="marion" class="section">
+        <h2>Marion’s Kitchen Responses</h2>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
