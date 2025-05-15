@@ -49,7 +49,7 @@ const cookdineReplies = [
   const marionReplies = [
     {
       id: "mk-availability-01",
-      subject: "where can I buy your curry paste",
+      subject: "Where can I buy your curry paste",
       message: "Marion’s curry paste is available at both Coles and Woolworths stores across Australia. 😊 Feel free to let us know if you have any trouble finding it! – Marion’s Team",
       pinned: false
     },
@@ -63,6 +63,12 @@ const cookdineReplies = [
       id: "mk-page-02",
       subject: "Is this a fake site?",
       message: "Thank you for reaching out and checking with us! The only official group we have is Marion's Kitchen Community. Our official accounts are Marion Grasby, Marion's Kitchen, Marion Cook Asian Food Classics, Quick and Easy Cooking with Marion, Cook Dine Host and MAKO Kitchenware. Any other account is not affiliated with us and may be a fake. - Marion’s Team",
+      pinned: true
+    },
+    {
+      id: "mk-substitute-01",
+      subject: "What can you use instead of fish sauce?",
+      message: "You could try using soy sauce instead of fish sauce to give you the salty flavour. It will change the character of the dish a little and you’ll need to experiment with how much you add as some soy sauces can be more or less salty than fish sauce. Hope that helps! - Marion's Team",
       pinned: true
     }
   ];
@@ -92,7 +98,7 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
     "Thank you for your comment! Here’s the recipe: {{link}} - Marion's Team"
   ];
   
-  document.getElementById("generate-replies").addEventListener("click", () => {
+  function generateReplies() {
     const link = document.getElementById("recipe-link").value.trim();
     const container = document.getElementById("generated-replies");
   
@@ -100,6 +106,8 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
       container.innerHTML = "<p>Please enter a recipe link.</p>";
       return;
     }
+  
+  
   
     container.innerHTML = "";
   
@@ -121,6 +129,17 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
       div.appendChild(btn);
       container.appendChild(div);
     });
+  }
+
+  // 🔘 Trigger by button click
+  document.getElementById("generate-replies").addEventListener("click", generateReplies);
+  
+  // ⌨️ Trigger by pressing Enter
+  document.getElementById("recipe-link").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      generateReplies();
+    }
   });
 
   // Auto-run on load
@@ -161,9 +180,14 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
         title.prepend(pin);
       }
   
-      wrapper.appendChild(title);
-      wrapper.appendChild(body);
+      const content = document.createElement("div");
+      content.className = "reply-content";
+      content.appendChild(title);
+      content.appendChild(body);
+
+      wrapper.appendChild(content);
       wrapper.appendChild(btn);
+
       container.appendChild(wrapper);
     });
   }

@@ -4,12 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sidekick</title>
+  <link rel="icon" type="image/png" href="catfavicon.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="app">
     <aside class="sidebar">
-      <h1>Sidekick</h1>
+      <div class="logo-wrap">
+        <img src="catfavicon.png" alt="Sidekick Logo" class="logo" />
+        <span>Sidekick</span>
+      </div>
       <nav>
         <button class="nav-btn active" data-section="social">Social Tools</button>
         <button class="nav-btn" data-section="cookdine">CookDineHost</button>
@@ -21,7 +25,7 @@
       <!-- SOCIAL TOOLS SECTION -->
       <section id="social" class="section active">
         <h2>Share Recipe Tool</h2>
-        <p>Paste a recipe link and get 10 response variations instantly.</p>
+        <p>Paste a recipe link and get response variations instantly.</p>
 
         <input type="text" id="recipe-link" placeholder="Paste recipe link here..." />
         <button id="generate-replies">Generate Replies</button>
