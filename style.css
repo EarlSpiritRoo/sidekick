@@ -36,7 +36,7 @@ body {
   }
   
   .nav-btn.active {
-    background: plum;
+    background: rgb(204, 177, 204);
     border-left: 4px solid black;
   }
   

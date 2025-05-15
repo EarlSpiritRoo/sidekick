@@ -33,7 +33,7 @@ const cookdineReplies = [
     },
     {
       id: "cdh-pan-01",
-      subject: "Why buy the steak pan set as opposed to just buying a frying pan set? Wouldn't they basically do the same?,
+      subject: "Why buy the steak pan set as opposed to just buying a frying pan set? Wouldn't they basically do the same?",
       message: "Both the steak and frying pans are crafted from the exact same high-quality black steel. The frying pan was designed to be much lighter in weight, so it is easier to manoeuvre. In the classic frying pan design it has shallow edges, making it ideal for everyday cooking. Both are fantastic pieces, it really depends on the weight and design you prefer and what you would utilise most in the kitchen. - Marion's Team",
       pinned: false
     },
@@ -85,15 +85,11 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
   // Share Recipe Generator
   const replies = [
     "Get the full recipe here: {{link}} - Marion's Team",
-    "Grab the recipe here 👉 {{link}}",
-    "Enjoy cooking! Here's the full recipe: {{link}}",
-    "Found it for you: {{link}}",
-    "Hope you love it! {{link}}",
-    "Click here to check it out: {{link}}",
-    "You're going to love this one: {{link}}",
-    "Try this dish! {{link}}",
-    "Boom 💥 Recipe drop: {{link}}",
-    "Got you! {{link}}"
+    "You can find the recipe here: {{link}} - Marion's Team",
+    "Here's the full recipe: {{link}} Enjoy cooking! - Marion's Team",
+    "Here’s the recipe: {{link}} Hope you love it! - Marion's Team",
+    "Here you go! {{link}} - Marion's Team",
+    "Thank you for your comment! Here’s the recipe: {{link}} - Marion's Team"
   ];
   
   document.getElementById("generate-replies").addEventListener("click", () => {
