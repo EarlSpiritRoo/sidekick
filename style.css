@@ -19,6 +19,7 @@ body {
   
   .sidebar h1 {
     font-size: 1.25rem;
+    color: mediumvioletred;
   }
   
   .nav-btn {
@@ -31,10 +32,11 @@ body {
     border: none;
     cursor: pointer;
     font-weight: bold;
+    color: black;
   }
   
   .nav-btn.active {
-    background: white;
+    background: plum;
     border-left: 4px solid black;
   }
   

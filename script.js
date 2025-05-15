@@ -5,24 +5,42 @@ const cookdineReplies = [
       id: "cdh-shipping-01",
       subject: "Is it duty free in Portugal?",
       message: "Thank you for your message! There are no additional duties or import fees for Portugal. Everything’s included in the shipping price. Plus, we offer free shipping on orders over €150. Let us know if you have any other questions! 😊 - Marion’s Team",
-      pinned: true
-    },
-    {
-      id: "cdh-wok-01",
-      subject: "Is the wok rust resistant??",
-      message: "The MAKO Black Steel Wok comes pre-seasoned with high-quality olive oil, so it's ready to use straight out of the box. While carbon steel isn’t naturally rust-resistant, the pre-seasoning helps protect it. With regular use, drying, and proper care, it’ll continue to build a natural non-stick layer that helps guard against rust. 😊 - Marion's Team",
       pinned: false
     },
     {
       id: "cdh-wok-01",
+      subject: "Is the wok rust resistant?",
+      message: "The MAKO Black Steel Wok comes pre-seasoned with high-quality olive oil, so it's ready to use straight out of the box. While carbon steel isn’t naturally rust-resistant, the pre-seasoning helps protect it. With regular use, drying, and proper care, it’ll continue to build a natural non-stick layer that helps guard against rust. 😊 - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-wok-02",
       subject: "Does the wok and lid set come with the free cookbooks?",
       message: "The MAKO Wok & Lid Set doesn’t include the free cookbooks. The 2 free cookbooks are only included as part of the Hot Wok Offer. Feel free to let us know if you have any further questions. 😊 - Marion's Team",
       pinned: true
     },
     {
-      id: "cdh-page-01",
-      subject: "ex",
-      message: "ex",
+      id: "cdh-wok-03",
+      subject: "How long before Lids for the wok will be available?",
+      message: "We are planning to re-stock the wok lid early-mid June! - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-wok-04",
+      subject: "I recently purchased a wok but didn’t receive my cook books",
+      message: "Thank you for getting in touch. Looking at your order you purchased the wok and lid set which is a separate promotion to the hot wok offer. We apologise for any confusion caused. - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-pan-01",
+      subject: "Why buy the steak pan set as opposed to just buying a frying pan set? Wouldn't they basically do the same?,
+      message: "Both the steak and frying pans are crafted from the exact same high-quality black steel. The frying pan was designed to be much lighter in weight, so it is easier to manoeuvre. In the classic frying pan design it has shallow edges, making it ideal for everyday cooking. Both are fantastic pieces, it really depends on the weight and design you prefer and what you would utilise most in the kitchen. - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-induction-01",
+      subject: "Can you use on induction cook top?",
+      message: "Yes, all our cookware is designed to work on any cooktop including induction. It is important that the size of the pans are close in size to the burner/element you are using to ensure even heat distribution. If you are interested in our Black steel cookware, we also recommend gradually heating your pan on induction, as black steel is extremely reactive, meaning it gets hot quick. - Marion's Team",
       pinned: false
     }
   ];
