@@ -3,20 +3,26 @@
 const cookdineReplies = [
     {
       id: "cdh-oven-01",
-      subject: "Are your pans oven safe?",
-      message: "Yes, our MAKO pans are oven-safe up to 170°C. Just be sure to use oven gloves when transferring between oven and stovetop.",
+      subject: "ex?",
+      message: "ex",
       pinned: true
     },
     {
       id: "cdh-induction-01",
-      subject: "Is the wok compatible with induction cooktops?",
-      message: "Yes, the MAKO 5-Ply Non-Stick Wok is compatible with all stovetops, including induction.",
+      subject: "ex?",
+      message: "ex",
       pinned: false
     },
     {
       id: "cdh-lid-01",
-      subject: "Does this frying pan come with a lid?",
-      message: "Our frying pans are sold without lids unless stated otherwise. Lid bundles are available separately on our website.",
+      subject: "ex?",
+      message: "ex",
+      pinned: false
+    },
+    {
+      id: "cdh-page-01",
+      subject: "ex",
+      message: "ex",
       pinned: false
     }
   ];
@@ -25,20 +31,20 @@ const cookdineReplies = [
   const marionReplies = [
     {
       id: "mk-availability-01",
-      subject: "Can I buy your sauces in New Zealand?",
-      message: "Thanks for reaching out! Unfortunately, our food products are not currently available in New Zealand. We’re working on it!",
-      pinned: true
-    },
-    {
-      id: "mk-substitute-01",
-      subject: "What can I use instead of Chinese cabbage?",
-      message: "You can substitute Chinese cabbage with wombok, savoy cabbage, or even shredded lettuce for a similar texture.",
+      subject: "where can I buy your curry paste",
+      message: "Marion’s curry paste is available at both Coles and Woolworths stores across Australia. 😊 Feel free to let us know if you have any trouble finding it! – Marion’s Team",
       pinned: false
     },
     {
-      id: "mk-crispy-oil-01",
-      subject: "Where can I buy Marion’s Crispy Chilli Oil?",
-      message: "Marion’s Crispy Chilli Oil is available at Coles and Woolworths in Australia.",
+      id: "mk-page-01",
+      subject: "Canada is not allowing your post to come to us",
+      message: "Thank you for letting us know! Due to Canada’s Online News Act, some of our Facebook posts may not be visible in Canada if they’re flagged as news-related content even if they’re just recipes or cooking tips. We know it’s frustrating, and we really appreciate your support from Canada. You can still find all our recipes and videos anytime at www.marionskitchen.com or on our YouTube channel here: youtube.com/@MarionsKitchen. - Marion’s Team",
+      pinned: false
+    },
+    {
+      id: "mk-page-02",
+      subject: "Is this a fake site?",
+      message: "Thank you for reaching out and checking with us! The only official group we have is Marion's Kitchen Community. Our official accounts are Marion Grasby, Marion's Kitchen, Marion Cook Asian Food Classics, Quick and Easy Cooking with Marion, Cook Dine Host and MAKO Kitchenware. Any other account is not affiliated with us and may be a fake. - Marion’s Team",
       pinned: true
     }
   ];
@@ -60,7 +66,7 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
   
   // Share Recipe Generator
   const replies = [
-    "Here you go! {{link}}",
+    "Get the full recipe here: {{link}} - Marion's Team",
     "Grab the recipe here 👉 {{link}}",
     "Enjoy cooking! Here's the full recipe: {{link}}",
     "Found it for you: {{link}}",
@@ -207,5 +213,5 @@ document.getElementById("cookdine-search").addEventListener("input", (e) => {
   document.getElementById("marion-search").addEventListener("input", (e) => {
     renderMarionReplies(e.target.value);
   });
-  
+go  
   
