@@ -2,22 +2,22 @@
 // 🛒 CookDineHost Replies
 const cookdineReplies = [
     {
-      id: "cdh-oven-01",
-      subject: "ex?",
-      message: "ex",
+      id: "cdh-shipping-01",
+      subject: "Is it duty free in Portugal?",
+      message: "Thank you for your message! There are no additional duties or import fees for Portugal. Everything’s included in the shipping price. Plus, we offer free shipping on orders over €150. Let us know if you have any other questions! 😊 - Marion’s Team",
       pinned: true
     },
     {
-      id: "cdh-induction-01",
-      subject: "ex?",
-      message: "ex",
+      id: "cdh-wok-01",
+      subject: "Is the wok rust resistant??",
+      message: "The MAKO Black Steel Wok comes pre-seasoned with high-quality olive oil, so it's ready to use straight out of the box. While carbon steel isn’t naturally rust-resistant, the pre-seasoning helps protect it. With regular use, drying, and proper care, it’ll continue to build a natural non-stick layer that helps guard against rust. 😊 - Marion's Team",
       pinned: false
     },
     {
-      id: "cdh-lid-01",
-      subject: "ex?",
-      message: "ex",
-      pinned: false
+      id: "cdh-wok-01",
+      subject: "Does the wok and lid set come with the free cookbooks?",
+      message: "The MAKO Wok & Lid Set doesn’t include the free cookbooks. The 2 free cookbooks are only included as part of the Hot Wok Offer. Feel free to let us know if you have any further questions. 😊 - Marion's Team",
+      pinned: true
     },
     {
       id: "cdh-page-01",
