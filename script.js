@@ -38,9 +38,39 @@ const cookdineReplies = [
       pinned: false
     },
     {
+      id: "cdh-pan-02",
+      subject: "Will the 5-Ply Genius Copper Essentail Pan get the high heat like the wok?",
+      message: "Yes, this pan is designed to handle high heat as well, which makes a big difference when it comes to getting that perfect sear. It should give you that nice, caramelised crust you’re after. - Marion's Team",
+      pinned: false
+    },
+    {
       id: "cdh-induction-01",
       subject: "Can you use on induction cook top?",
       message: "Yes, all our cookware is designed to work on any cooktop including induction. It is important that the size of the pans are close in size to the burner/element you are using to ensure even heat distribution. If you are interested in our Black steel cookware, we also recommend gradually heating your pan on induction, as black steel is extremely reactive, meaning it gets hot quick. - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-black-steel-01",
+      subject: "Do we need to re-season Carbon Steel after each use?",
+      message: "Yes, the carbon steel wok/pan requires the re-seasoning after each use to build up the natural patina. Feel free to let us know if you have further questions. 😃 - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-black-steel-02",
+      subject: "Why do we need to re-season Carbon Steel after each use?",
+      message: "The MAKO steak pan is not a non-stick pan. It was designed to further develop the natural non-stick patina layer over time. The coating is made from high-quality olive oil on the steel, and nothing else. And to keep that natural patina growing, regular seasoning is all it needs 😃 - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-black-steel-02",
+      subject: "What oil to use to re-season the carbon steel after each use?",
+      message: "We recommend using an oil with a higher smoking point such as vegetable, avocado or canola oil - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-black-steel-03",
+      subject: "Does the steak pan only cook steaks?",
+      message: "Our MAKO steak pan is designed with versatility in mind, It's suited for cooking all ingredients – fish, poultry, pork, lamb and eggs as well as beef. You can even sear veggies off in this pan for ultimate flavour! - Marion's Team",
       pinned: false
     }
   ];
