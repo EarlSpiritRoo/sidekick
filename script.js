@@ -72,6 +72,60 @@ const cookdineReplies = [
       subject: "Does the steak pan only cook steaks?",
       message: "Our MAKO steak pan is designed with versatility in mind, It's suited for cooking all ingredients – fish, poultry, pork, lamb and eggs as well as beef. You can even sear veggies off in this pan for ultimate flavour! - Marion's Team",
       pinned: false
+    };
+    {
+      id: "cdh-black-steel-04",
+      subject: "is cast iron is better than carboon steel?",
+      message: "Cast iron pans can definitely do a good job. They can get searing hot unlike non-stick or a typical bbq so they produce a solid crust. The added advantage of carbon steel is that you have more reactive temperature control. So you can get high heat for crust but then change it up if necessary. - Marion's Team",
+      pinned: false
+    };
+    {
+      id: "cdh-black-steel-05",
+      subject: "Can the black steelc be used on a Ceramic stove.",
+      message: "Yes, it can. Our MAKO Steak pan works on all stovetops, including the ceramic top. - Marion's Team",
+      pinned: false
+    };
+    {
+      id: "cdh-black-steel-06",
+      subject: "BBQ or steak pan",
+      message: "Cooking a steak on a BBQ grill is definitely a classic way to get great flavour. We also find that using a steak pan is another fantastic method, as it allows for high heat and lots of contact with the surface, creating an amazing crust across the whole surface of the steak. Both ways have their own delicious results! 😊 - Marion's Team",
+      pinned: false
+    };
+    {
+      id: "cdh-black-steel-07",
+      subject: "Do you sell your wooden spoons?",
+      message: "We don't unfortunately. They are sold within the wok kit only. - Marion's Team",
+      pinned: false
+    };
+    {
+      id: "cdh-black-steel-08",
+      subject: "Can your cookware cook on high heat I’ve noticed most pan you buy these days say don’t cook on high heat",
+      message: "For high heat cooking you'd want either carbon black steel or stainless steel cookware. Our black steel cookware is built for high heat cooking and can reach temperatures up to 300 degrees - making it the perfect choice when searing any meat or veggies. Other cookware, for example non-stick pans, are not meant for high heat cooking, as it can damage the integrity of the cookware. - Marion's Team",
+      pinned: false
+    };
+    {
+      id: "cdh-black-steel-09",
+      subject: "I've brought expensive ones before and they lift in the middle/warp?",
+      message: "It's important when purchasing cookware that the base size of the pan matches the element size you will be cooking on, this ensure even heat distribution and prevents warping. Additionally, if cooking on an induction cooktop, gradually heat the pan as black steel is extremely reactive and heats quick! - Marion's Team",
+      pinned: false
+    };
+    {
+      id: "cdh-black-steel-10",
+      subject: "Should I buy mako non stick or black steel frypans please?",
+      message: "It really comes down to what you cook the most of day to day and what material you prefer to cook with. Our black steel cookware is perfect for high heat cooking. If you're looking for that high heat sear on steaks, chicken, fish or veggies, its an excellent choice. Black steel does require basic aftercare, it is hand-wash only and requires re-seasoning after each use. Free from any coating, there are no chemicals in our black steel cookware, making it a natural non-stick alternative. \n Our Genius Copper cookware is suited for low-medium heat cooking only and it's a great choice if you prioritise ease of use and cleaning. You can hand wash or place in the dish washer for easy clean up, and it's perfect for everyday cooking. Featuring a plasma non-stick surface, this cookware is free from Lead, Cadmium and PFOAS. We hope this helps. Let us know what you end up going for! - Marion's Team",
+      pinned: false
+    };
+    {
+      id: "cdh-black-steel-11",
+      subject: "How much is the wok?",
+      message: "You can find the current price and details for the Hot Wok Offer here: https://cookdinehost.com/collections/black-steel-wok-accessories/products/hot-wok-offer It also currently includes 2 free cookbooks! 😊 - Marion’s Team",
+      pinned: false
+    };
+    {
+      id: "cdh-nonstick-01",
+      subject: "Does the steak pan have any non-stick surface that will produce fume or chemicals being toxic for my pet bird?",
+      message: "Our steak pan does not contain PFASs, Teflon, PFOA, PFOS, or PTFE. While we don’t contain any of the above, we can’t confirm 100% if it is safe for cooking around birds. Carbon steel is designed to be heated to high temperatures, which can create quite a lot of smoke, and is a normal part of carbon steel cooking. However, from our understanding, this can be harmful to birds and is not recommended. - Marion's Team",
+      pinned: false
     }
   ];
   
