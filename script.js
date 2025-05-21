@@ -126,7 +126,14 @@ const cookdineReplies = [
       subject: "Does the steak pan have any non-stick surface that will produce fume or chemicals being toxic for my pet bird?",
       message: "Our steak pan does not contain PFASs, Teflon, PFOA, PFOS, or PTFE. While we don’t contain any of the above, we can’t confirm 100% if it is safe for cooking around birds. Carbon steel is designed to be heated to high temperatures, which can create quite a lot of smoke, and is a normal part of carbon steel cooking. However, from our understanding, this can be harmful to birds and is not recommended. - Marion's Team",
       pinned: false
+    },
+    {
+      id: "cdh-nonstick-02",
+      subject: "Do the MAKO 5-ply handles get hot?",
+      message: "We're so glad you’re loving the pans 😊 And yes, the 5-ply construction does make them a bit heavier but that’s also what gives them such great heat control and durability! - Marion’s Team",
+      pinned: false
     }
+
   ];
   
   // 🍜 Marion’s Kitchen Replies
