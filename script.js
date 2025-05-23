@@ -161,6 +161,12 @@ const cookdineReplies = [
       subject: "What can you use instead of fish sauce?",
       message: "You could try using soy sauce instead of fish sauce to give you the salty flavour. It will change the character of the dish a little and you’ll need to experiment with how much you add as some soy sauces can be more or less salty than fish sauce. Hope that helps! - Marion's Team",
       pinned: true
+    },
+    {
+      id: "mk-substitute-01",
+      subject: "What could I replace the shrimp paste with?",
+      message: "You can substitute the shrimp paste with a little fish sauce, miso paste, or even soy sauce with a pinch of sugar. Just a heads up, it won’t taste exactly the same. Hope that helps! 😊 - Marion's Team",
+      pinned: false
     }
   ];
   
