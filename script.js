@@ -2,6 +2,12 @@
 // 🛒 CookDineHost Replies
 const cookdineReplies = [
     {
+      id: "cdh-support-01",
+      subject: "Customer Issue",
+      message: "We're sorry to hear about that. Our support team will be in touch shortly to assist you 😊 - Marion's Team - Marion’s Team",
+      pinned: true
+    },
+    {
       id: "cdh-shipping-01",
       subject: "Is it duty free in Portugal?",
       message: "Thank you for your message! There are no additional duties or import fees for Portugal. Everything’s included in the shipping price. Plus, we offer free shipping on orders over €150. Let us know if you have any other questions! 😊 - Marion’s Team",
@@ -163,7 +169,7 @@ const cookdineReplies = [
       pinned: true
     },
     {
-      id: "mk-substitute-01",
+      id: "mk-substitute-02",
       subject: "What could I replace the shrimp paste with?",
       message: "You can substitute the shrimp paste with a little fish sauce, miso paste, or even soy sauce with a pinch of sugar. Just a heads up, it won’t taste exactly the same. Hope that helps! 😊 - Marion's Team",
       pinned: false
