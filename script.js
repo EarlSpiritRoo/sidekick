@@ -4,7 +4,7 @@ const cookdineReplies = [
     {
       id: "cdh-support-01",
       subject: "Customer Issue",
-      message: "We're sorry to hear about that. Our support team will be in touch shortly to assist you 😊 - Marion's Team - Marion’s Team",
+      message: "We're sorry to hear about that. Our support team will be in touch shortly to assist you 😊 - Marion's Team",
       pinned: true
     },
     {
