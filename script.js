@@ -128,6 +128,24 @@ const cookdineReplies = [
       pinned: false
     },
     {
+      id: "cdh-blacksteel-13",
+      subject: "Is the steak pa/black steel chemical free?",
+      message: "Yes, the Black Steel Steak Pan is chemical-free. It doesn’t contain PFAS, Teflon, PFOA, PFOS or PTFE. The natural non-stick surface is created by carbonising high-quality olive oil. There's no added chemicals or synthetic coatings. - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-blacksteel-14"
+      subject: "Should I buy mako non stick or black steel frypans?",
+      message: "It really comes down to what you cook the most of day to day and what material you prefer to cook with. Our black steel cookware is perfect for high heat cooking. If you're looking for that high heat sear on steaks, chicken, fish or veggies, its an excellent choice. Black steel does require basic aftercare, it is hand-wash only and requires re-seasoning after each use. Free from any coating, there are no chemicals in our black steel cookware, making it a natural non-stick alternative. Our Genius Copper cookware is suited for low-medium heat cooking only and it's a great choice if you prioritise ease of use and cleaning. You can hand wash or place in the dish washer for easy clean up, and it's perfect for everyday cooking. Featuring a plasma non-stick surface, this cookware is free from Lead, Cadmium and PFOAS. We hope this helps. Let us know what you end up going for! - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-blacksteel-15"
+      subject: "Can I use an olive oil spray on the frying pans?",
+      message:"We don't recommend using an olive oil spray when cooking or seasoning your wok. Olive oil has a lower smoke point than other oils, which means it can burn and smoke at relatively low temperatures, potentially ruining the seasoning or affecting the taste of your food. For seasoning, it's best to use oils with a high smoke point like canola, peanut, or avocado oil. I hope this helps. - Marion's Team"
+      pinned: false
+    }
+    {
       id: "cdh-geniuscopper-01",
       subject: "Does the steak pan have any non-stick surface that will produce fume or chemicals being toxic for my pet bird?",
       message: "Our steak pan does not contain PFASs, Teflon, PFOA, PFOS, or PTFE. While we don’t contain any of the above, we can’t confirm 100% if it is safe for cooking around birds. Carbon steel is designed to be heated to high temperatures, which can create quite a lot of smoke, and is a normal part of carbon steel cooking. However, from our understanding, this can be harmful to birds and is not recommended. - Marion's Team",
@@ -137,6 +155,12 @@ const cookdineReplies = [
       id: "cdh-geniuscopper-02",
       subject: "Do the MAKO 5-ply handles get hot?",
       message: "We cannot guarantee that the top handle of the lid will remain cool. The heat transfer depends on various factors such as the cooking duration and temperature. Since the handles are made of metal, they may heat up during use. However, the long handle is intended to remain cool during cooking. 😊 - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-cookbooks-01",
+      subject: "where to buy the cookbooks",
+      message: "Thank you for your interest! You can purchase the cookbooks here: https://cookdinehost.com/collections/cookbooks 😊 - Marion’s Team",
       pinned: false
     }
 
