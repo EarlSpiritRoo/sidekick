@@ -158,8 +158,8 @@ const cookdineReplies = [
       pinned: false
     },
     {
-      id: "cdh-geniuscopper-03"
-      subject: "Non-stick work on induction"
+      id: "cdh-geniuscopper-03",
+      subject: "Non-stick work on induction",
       message: "Yes, all our non-stick cookware is designed to work on any cooktop including induction. It’s best suited for low to medium heat cooking, and it’s important that the size of the pan matches your burner or element to ensure even heat distribution. - Marion’s Team",
       pinned: false
     },
