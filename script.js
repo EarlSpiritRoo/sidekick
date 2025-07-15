@@ -292,10 +292,17 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
     const container = document.getElementById("cookdine-replies");
     container.innerHTML = "";
   
-    const filtered = cookdineReplies.filter(reply =>
-      reply.subject.toLowerCase().includes(search.toLowerCase()) ||
-      reply.message.toLowerCase().includes(search.toLowerCase())
-    );
+    let filtered;
+    if (search.startsWith("!")) {
+      const index = parseInt(search.substring(1)) - 1;
+      filtered = cookdineReplies[index] ? [cookdineReplies[index]] : [];
+    } else {
+      filtered = cookdineReplies.filter(reply =>
+        reply.subject.toLowerCase().includes(search.toLowerCase()) ||
+        reply.message.toLowerCase().includes(search.toLowerCase())
+      );
+    }
+
   
     const sorted = filtered.sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0));
   
@@ -304,7 +311,7 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
       wrapper.className = "reply-block";
   
       const title = document.createElement("h4");
-      title.textContent = reply.subject;
+      title.textContent = `#${index + 1}: ${reply.subject}`;
   
       const body = document.createElement("p");
       body.textContent = reply.message;
@@ -345,10 +352,17 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
     const container = document.getElementById("marion-replies");
     container.innerHTML = "";
   
-    const filtered = marionReplies.filter(reply =>
-      reply.subject.toLowerCase().includes(search.toLowerCase()) ||
-      reply.message.toLowerCase().includes(search.toLowerCase())
-    );
+    let filtered;
+    if (search.startsWith("!")) {
+      const index = parseInt(search.substring(1)) - 1;
+      filtered = marionReplies[index] ? [marionReplies[index]] : [];
+    } else {
+      filtered = marionReplies.filter(reply =>
+        reply.subject.toLowerCase().includes(search.toLowerCase()) ||
+        reply.message.toLowerCase().includes(search.toLowerCase())
+      );
+    }
+
   
     const sorted = filtered.sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0));
   
@@ -357,7 +371,7 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
       wrapper.className = "reply-block";
   
       const title = document.createElement("h4");
-      title.textContent = reply.subject;
+      title.textContent = `#${index + 1}: ${reply.subject}`;
   
       const body = document.createElement("p");
       body.textContent = reply.message;
