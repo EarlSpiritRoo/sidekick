@@ -309,9 +309,9 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
     sorted.forEach(reply => {
       const wrapper = document.createElement("div");
       wrapper.className = "reply-block";
-  
+      const realIndex = cookdineReplies.indexOf(reply);
       const title = document.createElement("h4");
-      title.textContent = `#${index + 1}: ${reply.subject}`;
+      title.textContent = `#${realIndex + 1}: ${reply.subject}`;
   
       const body = document.createElement("p");
       body.textContent = reply.message;
@@ -369,9 +369,9 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
     sorted.forEach(reply => {
       const wrapper = document.createElement("div");
       wrapper.className = "reply-block";
-  
+      const realIndex = marionReplies.indexOf(reply);
       const title = document.createElement("h4");
-      title.textContent = `#${index + 1}: ${reply.subject}`;
+      title.textContent = `#${realIndex + 1}: ${reply.subject}`;
   
       const body = document.createElement("p");
       body.textContent = reply.message;
