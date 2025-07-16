@@ -890,10 +890,15 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
   const replies = [
     "Get the full recipe here: {{link}} - Marion's Team",
     "You can find the recipe here: {{link}} - Marion's Team",
-    "Here's the full recipe: {{link}} Enjoy cooking! - Marion's Team",
+    "Here's the full recipe: {{link}} Enjoy cooking! 😊 - Marion's Team",
     "Here’s the recipe: {{link}} Hope you love it! - Marion's Team",
-    "Here you go! {{link}} - Marion's Team",
-    "Thank you for your comment! Here’s the recipe: {{link}} - Marion's Team"
+    "Here you go! {{link}} Happy cooking! 😋 - Marion's Team",
+    "Thank you for your comment! Here’s the recipe: {{link}} - Marion's Team",
+    "Here’s where you can find the full recipe: {{link}} Happy cooking! - Marion's Team",
+    "You can find the ingredients and the full recipe here: {{link}} Enjoy! - Marion's Team",
+    "Hope this helps! Here's the full recipe: {{link}} 🍽️ - Marion's Team",
+    "FOR IG ➡️ Hi! To get the recipe, type in 'Marion's Kitchen <recipe title>' in your Google search bar. Enjoy Cooking! 😊 - Marion’s Team",
+    "FOR IG ➡️ Get the full recipe by searching 'Marion's Kitchen <recipe title>' on Google. Hope you enjoy it! 😊- Marion’s Team"
   ];
   
   function generateReplies() {
