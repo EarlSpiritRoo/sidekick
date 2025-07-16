@@ -161,6 +161,48 @@ body {
     font-weight: bold;
     color: mediumvioletred;
   }
+
+
+  #cat-container {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 999;
+    width: 80px;
+    height: 80px;
+  }
+  
+  #cat {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: url('https://i.imgur.com/1YcqsYf.png') no-repeat center/contain;
+  }
+  
+  .eye {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    overflow: hidden;
+    top: 25px;
+  }
+  
+  .left-eye { left: 20px; }
+  .right-eye { right: 20px; }
+  
+  .pupil {
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    transition: all 0.1s ease;
+  }
+  
   
   
   

@@ -1069,4 +1069,20 @@ document.getElementById("cookdine-search").addEventListener("input", (e) => {
     renderMarionReplies(e.target.value);
   });
 go  
+
+
+document.addEventListener('mousemove', (e) => {
+  const eyes = document.querySelectorAll('.pupil');
+  eyes.forEach(pupil => {
+    const eye = pupil.parentElement.getBoundingClientRect();
+    const x = e.clientX - eye.left - eye.width / 2;
+    const y = e.clientY - eye.top - eye.height / 2;
+    const angle = Math.atan2(y, x);
+    const radius = 5;
+
+    pupil.style.left = `${5 + radius * Math.cos(angle)}px`;
+    pupil.style.top = `${5 + radius * Math.sin(angle)}px`;
+  });
+});
+
   
