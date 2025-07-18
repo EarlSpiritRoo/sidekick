@@ -570,6 +570,12 @@ const cookdineReplies = [
       "subject": "Are the prices USD ?",
       "message": "Prices depend on which site you're viewing. If you'd like to see prices in USD, you can head to our US store here: https://us.cookdinehost.com \ud83d\ude0a - Marion's Team",
       "pinned": false
+    },
+    {
+      "id": "cdh-3068",
+      "subject": "Will they warp over time? I have an expensive well known brand that have done so as they don’t sit flat on the induction hob.",
+      "message": "Warping can occur with any pan if it's exposed to concentrated heat, especially on induction cooktops. It’s important to ensure the pan size closely matches the size of the burner or element. This helps distribute heat evenly and prevents warping over time. We also recommend gradually heating the pan, especially on induction. With proper care, our pans are built to stay flat and perform beautifully for years to come.",
+      "pinned": false
     }
   ];
 
