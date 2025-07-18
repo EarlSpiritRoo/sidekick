@@ -875,6 +875,12 @@ const cookdineReplies = [
       "subject": "Where can I buy the Coconut siracha sauce",
       "message": "You can find it at Woolworths stores across Australia. Feel free to let us know if you need help finding it! \ud83d\ude0a - Marion's Team",
       "pinned": false
+    },
+    {
+      "id": "mk-3042",
+      "subject": "Where can I buy the Crispy Chilli Oil in other countries.",
+      "message": "Unfortunately, Marion's Kitchen Crispy Chilli Oil are currently only available in Australia. Here’s Marion's homemade version you can try: https://www.marionskitchen.com/homemade-chilli-crisp/ Hope that helps! 😊  Marion’s Team",
+      "pinned": false
     }
   ];
 
