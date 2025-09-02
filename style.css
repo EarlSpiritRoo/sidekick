@@ -142,6 +142,48 @@ body {
     align-self: flex-start;
   }
   
+  /* Make reply cards and generated replies feel clickable */
+  .reply-block,
+  #generated-replies div {
+    cursor: pointer;
+    transition: background-color 160ms ease, box-shadow 160ms ease;
+  }
+
+  .reply-block:hover,
+  #generated-replies div:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  /* Flash after copy */
+  .reply-block.copied,
+  #generated-replies div.copied {
+    background: #ffe6f2; /* light pink */
+  }
+
+  /* Tiny "Copied!" popup */
+  .copied-pop {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: #111;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 4px;
+    opacity: 0;
+    animation: popfade 1200ms ease forwards;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  @keyframes popfade {
+    0%   { opacity: 0; transform: translateY(-4px); }
+    10%  { opacity: 1; transform: translateY(0); }
+    80%  { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-4px); }
+  }
+
+
   .logo {
     width: 24px;
     height: 24px;

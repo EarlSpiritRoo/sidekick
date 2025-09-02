@@ -1,3 +1,38 @@
+function attachCopyBehavior(wrapper, textToCopy) {
+  // for positioning the popup
+  if (!wrapper.style.position) wrapper.style.position = "relative";
+
+  // accessibility
+  wrapper.setAttribute("role", "button");
+  wrapper.setAttribute("tabindex", "0");
+
+  const doCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+
+      // flash pink
+      wrapper.classList.add("copied");
+      setTimeout(() => wrapper.classList.remove("copied"), 800);
+
+      // tiny popup
+      const pop = document.createElement("span");
+      pop.className = "copied-pop";
+      pop.textContent = "Copied!";
+      wrapper.appendChild(pop);
+      setTimeout(() => pop.remove(), 1200);
+    } catch (err) {
+      console.error("Copy failed:", err);
+    }
+  };
+
+  wrapper.addEventListener("click", doCopy);
+  wrapper.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      doCopy();
+    }
+  });
+}
 
 // 🛒 CookDineHost Replies
 const cookdineReplies = [
@@ -1071,8 +1106,6 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
       return;
     }
   
-  
-  
     container.innerHTML = "";
   
     replies.forEach(text => {
@@ -1081,19 +1114,11 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
       const div = document.createElement("div");
       div.textContent = reply;
   
-      const btn = document.createElement("button");
-      btn.className = "copy-btn";
-      btn.textContent = "Copy";
-      btn.addEventListener("click", () => {
-        navigator.clipboard.writeText(reply);
-        btn.textContent = "Copied!";
-        setTimeout(() => (btn.textContent = "Copy"), 1000);
-      });
-  
-      div.appendChild(btn);
+      attachCopyBehavior(div, reply);
       container.appendChild(div);
     });
   }
+  
 
   // 🔘 Trigger by button click
   document.getElementById("generate-replies").addEventListener("click", generateReplies);
@@ -1121,28 +1146,17 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
         reply.message.toLowerCase().includes(search.toLowerCase())
       );
     }
-
   
     const sorted = filtered.sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0));
   
     sorted.forEach(reply => {
       const wrapper = document.createElement("div");
       wrapper.className = "reply-block";
+      wrapper.style.position = "relative"; // for the popup
+  
       const realIndex = cookdineReplies.indexOf(reply);
       const title = document.createElement("h4");
       title.textContent = `#${realIndex + 1}: ${reply.subject}`;
-  
-      const body = document.createElement("p");
-      body.textContent = reply.message;
-  
-      const btn = document.createElement("button");
-      btn.textContent = "Copy";
-      btn.className = "copy-btn";
-      btn.addEventListener("click", () => {
-        navigator.clipboard.writeText(reply.message);
-        btn.textContent = "Copied!";
-        setTimeout(() => (btn.textContent = "Copy"), 1000);
-      });
   
       if (reply.pinned) {
         const pin = document.createElement("span");
@@ -1151,17 +1165,21 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
         title.prepend(pin);
       }
   
+      const body = document.createElement("p");
+      body.textContent = reply.message;
+  
       const content = document.createElement("div");
       content.className = "reply-content";
       content.appendChild(title);
       content.appendChild(body);
-
+  
       wrapper.appendChild(content);
-      wrapper.appendChild(btn);
-
       container.appendChild(wrapper);
+  
+      attachCopyBehavior(wrapper, reply.message);
     });
   }
+  
   
   
   // Auto-run on load
@@ -1181,28 +1199,17 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
         reply.message.toLowerCase().includes(search.toLowerCase())
       );
     }
-
   
     const sorted = filtered.sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0));
   
     sorted.forEach(reply => {
       const wrapper = document.createElement("div");
       wrapper.className = "reply-block";
+      wrapper.style.position = "relative";
+  
       const realIndex = marionReplies.indexOf(reply);
       const title = document.createElement("h4");
       title.textContent = `#${realIndex + 1}: ${reply.subject}`;
-  
-      const body = document.createElement("p");
-      body.textContent = reply.message;
-  
-      const btn = document.createElement("button");
-      btn.textContent = "Copy";
-      btn.className = "copy-btn";
-      btn.addEventListener("click", () => {
-        navigator.clipboard.writeText(reply.message);
-        btn.textContent = "Copied!";
-        setTimeout(() => (btn.textContent = "Copy"), 1000);
-      });
   
       if (reply.pinned) {
         const pin = document.createElement("span");
@@ -1211,12 +1218,17 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
         title.prepend(pin);
       }
   
+      const body = document.createElement("p");
+      body.textContent = reply.message;
+  
       wrapper.appendChild(title);
       wrapper.appendChild(body);
-      wrapper.appendChild(btn);
       container.appendChild(wrapper);
+  
+      attachCopyBehavior(wrapper, reply.message);
     });
   }
+  
   
 
   renderCookdineReplies();
@@ -1229,8 +1241,6 @@ document.getElementById("cookdine-search").addEventListener("input", (e) => {
   document.getElementById("marion-search").addEventListener("input", (e) => {
     renderMarionReplies(e.target.value);
   });
-go  
-
 
 document.addEventListener('mousemove', (e) => {
   const eyes = document.querySelectorAll('.pupil');
