@@ -877,7 +877,7 @@ const cookdineReplies = [
       "pinned": false
     },
     {
-      "id": "mk-3042",
+      "id": "mk-3042",  
       "subject": "Where can I buy the Crispy Chilli Oil in other countries.",
       "message": "Unfortunately, Marion's Kitchen Crispy Chilli Oil are currently only available in Australia. Here’s Marion's homemade version you can try: https://www.marionskitchen.com/homemade-chilli-crisp/ Hope that helps! 😊  Marion’s Team",
       "pinned": false
@@ -909,8 +909,8 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
     "Here’s where you can find the full recipe: {{link}} Happy cooking! - Marion's Team",
     "You can find the ingredients and the full recipe here: {{link}} Enjoy! - Marion's Team",
     "Hope this helps! Here's the full recipe: {{link}} 🍽️ - Marion's Team",
-    "FOR IG ➡️ Hi! To get the recipe, type in 'Marion's Kitchen <recipe title> in your Google search bar. Enjoy Cooking! 😊 - Marion’s Team",
-    "FOR IG ➡️ Get the full recipe by searching 'Marion's Kitchen <recipe title> on Google. Hope you enjoy it! 😊- Marion’s Team"
+    "FOR IG ➡️ Hi! To get the recipe, type in 'Marion's Kitchen <recipe title>' in your Google search bar. Enjoy Cooking! 😊 - Marion’s Team",
+    "FOR IG ➡️ Get the full recipe by searching 'Marion's Kitchen <recipe title>' on Google. Hope you enjoy it! 😊- Marion’s Team"
   ];
   
   function generateReplies() {

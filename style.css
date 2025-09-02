@@ -179,19 +179,6 @@ body {
     background: url('catfavicon_flipped.png') no-repeat center/contain;
   }
   
-  .eye {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: white;
-    border-radius: 50%;
-    overflow: hidden;
-    top: 25px;
-  }
-  
-  .left-eye { left: 20px; }
-  .right-eye { right: 20px; }
-  
   .pupil {
     width: 10px;
     height: 10px;
