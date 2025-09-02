@@ -1256,4 +1256,26 @@ document.addEventListener('mousemove', (e) => {
   });
 });
 
+(() => {
+  const palette = [
+    "#111827","#ef4444","#f59e0b","#10b981",
+    "#3b82f6","#8b5cf6","#ec4899","#14b8a6"
+  ];
+  const pick = () => palette[Math.floor(Math.random() * palette.length)];
+
+  document.querySelectorAll("button:not(.nav-btn)").forEach(btn => {
+    // set an initial color
+    btn.style.setProperty("--btn-bg", pick());
+
+    // change color on hover and on click
+    btn.addEventListener("mouseenter", () =>
+      btn.style.setProperty("--btn-bg", pick())
+    );
+    btn.addEventListener("click", () =>
+      btn.style.setProperty("--btn-bg", pick())
+    );
+  });
+})();
+
+
   

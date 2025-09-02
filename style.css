@@ -62,14 +62,20 @@ body {
     font-size: 1rem;
   }
   
-  button {
+    /* use a CSS variable for background so JS can swap it */
+  button:not(.nav-btn) {
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
-    background-color: black;
+    background: var(--btn-bg, black);
     color: white;
     border: none;
     cursor: pointer;
+    transition: background-color .2s ease, transform .1s ease, box-shadow .2s ease;
   }
+  button:not(.nav-btn):hover   { transform: translateY(-1px); box-shadow: 0 6px 12px rgba(0,0,0,.15); }
+  button:not(.nav-btn):active  { transform: translateY(0);    box-shadow: 0 2px 4px rgba(0,0,0,.2); }
+  button:not(.nav-btn):focus-visible { outline: 3px solid #a855f7; outline-offset: 2px; }
+  
   
   #generated-replies div {
     margin-bottom: 1rem;
