@@ -639,7 +639,7 @@ const cookdineReplies = [
     },
     {
       id: "cdh-7010",
-      subject: "too expensice",
+      subject: "too expensive",
       message: "Thank you for your lovely message. You can get 10% off your first order by subscribing to our email list on our website. We'd love for you to enjoy one of our products 😊 - Marion's Team",
       pinned: false
     },
@@ -977,7 +977,55 @@ const cookdineReplies = [
       "subject": "Where can I buy the Crispy Chilli Oil in other countries.",
       "message": "Unfortunately, Marion's Kitchen Crispy Chilli Oil are currently only available in Australia. Here’s Marion's homemade version you can try: https://www.marionskitchen.com/homemade-chilli-crisp/ Hope that helps! 😊  Marion’s Team",
       "pinned": false
-    }
+    },
+    {
+      id: "mk-8000",
+      subject: "I miss being able to purchase your meal kits",
+      message: "Thank you very much for your support. We really appreciate it! At the moment, our food products are only available in Australia. We're sorry for the inconvenience. - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "mk-8001",
+      subject: "What recipe",
+      message: "Thank you for your interest. Could you let us know which recipe you're referring to? We'd love to help you find it. - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "mk-8002",
+      subject: "Crispy Chilli Oil Ingredients",
+      message: "Thank you ingredients of our Crispy chilli oil are Soybean Oil (55%), Dried Red Chilli (14%), Garlic, Ginger, Salt, Sugar, Shallots, Chilli (0.4%).",
+      pinned: false
+    },
+    {
+      id: "mk-8003",
+      subject: "Crispy Chilli Oil Ingredients",
+      message: "We appreciate your interest in our Crispy Chilli Oil! While we're happy to share the main ingredients, the exact formulation and percentage breakdown beyond what's listed is part of our proprietary recipe, so we're unable to disclose that information in full. However, to answer your question, the remaining 30% are made up of Garlic, Ginger, Salt, Sugar, and Shallots.",
+      pinned: false
+    },
+    {
+      id: "mk-8004",
+      subject: "Fake/Scam",
+      message: "Thank you for reaching out and checking with us! It looks like someone is pretending to be us. The only official group we have is Marion's Kitchen Community. Our official accounts are Marion Grasby, Marion's Kitchen, Marion Cook Asian Food Classics, Quick and Easy Cooking with Marion, Cook Dine Host and MAKO Kitchenware. Any other account is not affiliated with us and may be a fake. - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "mk-8005",
+      subject: "Available Marinade",
+      message: "Thank you for your interest. All of our marinades except Sticky Chilli Ginger have now been discontinued. The Sticky Chilli Ginger marinade is still available, but only at Woolworths stores. Feel free to let us know if you have any further questions. - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "mk-8006",
+      subject: "Available Marinade (longer version)",
+      message: "Thank you for reaching out about our Thai Spicy Satay Sauce.\n\nUnfortunately, this product has now been discontinued, which is why you're no longer seeing it at Coles, Woolworths, or other retailers.\n\nAt present, we don't have any information on if or when it will return. We truly appreciate your enthusiasm for the sauce and understand how disappointing this must be.\n\nFor now, all of our marinades, except for Sticky Chilli Ginger, have been discontinued. The Sticky Chilli Ginger marinade is still available, but only at Woolworths stores.\n\nThank you for being a fan of Marion's Kitchen, and please don't hesitate to reach out if you have any other questions.",
+      pinned: false
+    },
+    {
+      id: "mk-8007",
+      subject: "Whats an alternative for shaoxing wine",
+      message: "If Shaoxing wine isn't available, dry sherry or mirin makes a great substitute. You can also use apple juice for a non-alcoholic option, or simply leave it out if preferred. - Marion's Team",
+      pinned: false
+    },
   ];
 
 // Section switching logic
