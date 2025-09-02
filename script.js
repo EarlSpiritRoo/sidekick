@@ -7,6 +7,9 @@ function attachCopyBehavior(wrapper, textToCopy) {
   wrapper.setAttribute("tabindex", "0");
 
   const doCopy = async () => {
+    // don't copy if the user is selecting/highlighting text
+    if (window.getSelection && window.getSelection().toString()) return;
+
     try {
       await navigator.clipboard.writeText(textToCopy);
 
@@ -1310,60 +1313,19 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
     });
   }
   
-  
-  
-  
-  // Auto-run on load
-  renderCookdineReplies();
-
-  function renderMarionReplies(search = "") {
-    const container = document.getElementById("marion-replies");
-    container.innerHTML = "";
-  
-    let filtered;
-    if (search.startsWith("!")) {
-      const index = parseInt(search.substring(1)) - 1;
-      filtered = marionReplies[index] ? [marionReplies[index]] : [];
-    } else {
-      filtered = marionReplies.filter(reply =>
-        reply.subject.toLowerCase().includes(search.toLowerCase()) ||
-        reply.message.toLowerCase().includes(search.toLowerCase())
-      );
-    }
-  
-    const sorted = filtered.sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0));
-  
-    sorted.forEach(reply => {
-      const wrapper = document.createElement("div");
-      wrapper.className = "reply-block";
-      wrapper.style.position = "relative";
-  
-      const realIndex = marionReplies.indexOf(reply);
-      const title = document.createElement("h4");
-      title.textContent = `#${realIndex + 1}: ${reply.subject}`;
-  
-      if (reply.pinned) {
-        const pin = document.createElement("span");
-        pin.textContent = "📌";
-        pin.style.marginRight = "0.5rem";
-        title.prepend(pin);
-      }
-  
-      const body = document.createElement("p");
-      body.textContent = reply.message;
-  
-      wrapper.appendChild(title);
-      wrapper.appendChild(body);
-      container.appendChild(wrapper);
-  
-      attachCopyBehavior(wrapper, reply.message);
+    // ---- Initial render on page load ----
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCookdineReplies();
+      renderMarionReplies();
     });
+  } else {
+    renderCookdineReplies();
+    renderMarionReplies();
   }
   
   
-
-  renderCookdineReplies();
-renderMarionReplies();
+  // Auto-run on load
 
 document.getElementById("cookdine-search").addEventListener("input", (e) => {
     renderCookdineReplies(e.target.value);
