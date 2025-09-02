@@ -1068,6 +1068,116 @@ const cookdineReplies = [
     }
   ];
 
+// ---------- Smart search helpers ----------
+const normalize = (str) =>
+  str
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // remove accents
+    .replace(/[’‘]/g, "'")
+    .trim();
+
+const tokenize = (str) => normalize(str).split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+
+const buildIndex = (items) =>
+  items.map(item => {
+    const text = `${item.subject} ${item.message}`;
+    const norm = normalize(text);
+    const tokens = new Set(tokenize(text));
+    return { item, norm, tokens };
+  });
+
+// Tiny fuzzy check (helps with typos like "availble")
+const lev1 = (a, b) => {
+  if (Math.abs(a.length - b.length) > 1) return false;
+  let i=0, j=0, diff=0;
+  while (i < a.length && j < b.length) {
+    if (a[i] === b[j]) { i++; j++; continue; }
+    diff++;
+    if (diff > 1) return false;
+    if (a.length === b.length) { i++; j++; } // substitution
+    else if (a.length > b.length) { i++; }   // deletion in a
+    else { j++; }                             // insertion in a
+  }
+  return diff + (a.length - i) + (b.length - j) <= 1;
+};
+
+const tokenHit = (tokensSet, term) => {
+  if (tokensSet.has(term)) return true;
+  // lightweight fuzzy: check any token within distance 1 if term is long-ish
+  if (term.length >= 5) {
+    for (const t of tokensSet) if (lev1(t, term)) return true;
+  }
+  return false;
+};
+
+// Parse query into phrases, required terms, excluded terms
+const parseQuery = (raw) => {
+  const parts = raw.match(/"([^"]+)"|'([^']+)'|[^\s]+/g) || [];
+  const mustPhrases = [];
+  const mustTerms = [];
+  const notTerms = [];
+  for (let p of parts) {
+    const quoted = p.match(/^"(.*)"$|^'(.*)'$/);
+    if (quoted) {
+      mustPhrases.push(normalize(quoted[1] ?? quoted[2]));
+      continue;
+    }
+    let term = p;
+    let neg = false;
+    if (term.startsWith('-')) { neg = true; term = term.slice(1); }
+    term = normalize(term);
+    if (!term) continue;
+    (neg ? notTerms : mustTerms).push(term);
+  }
+  return { mustPhrases, mustTerms, notTerms };
+};
+
+const smartSearch = (index, rawQuery) => {
+  const q = rawQuery.trim();
+  if (!q) return index.map(e => e.item);
+
+  // keep your "!<n>" direct index jump
+  if (q.startsWith('!')) {
+    const n = parseInt(q.slice(1), 10) - 1;
+    return index[n] ? [index[n].item] : [];
+  }
+
+  const { mustPhrases, mustTerms, notTerms } = parseQuery(q);
+  const results = [];
+
+  for (const entry of index) {
+    const { item, norm, tokens } = entry;
+
+    // exclude terms
+    if (notTerms.some(t => tokenHit(tokens, t))) continue;
+
+    // phrases must appear
+    if (mustPhrases.some(ph => !norm.includes(ph))) continue;
+
+    // default AND: all terms must be present (order-agnostic)
+    let hits = 0;
+    for (const t of mustTerms) {
+      if (!tokenHit(tokens, t)) { hits = -1; break; }
+      hits++;
+    }
+    if (hits < 0) continue;
+
+    const score = hits + mustPhrases.length * 2 + (item.pinned ? 0.5 : 0);
+    results.push({ item, score });
+  }
+
+  results.sort((a, b) =>
+    (b.item.pinned ? 1 : 0) - (a.item.pinned ? 1 : 0) || b.score - a.score
+  );
+
+  return results.map(r => r.item);
+};
+
+// Build indices once (after arrays are defined)
+const cookdineIndex = buildIndex(cookdineReplies);
+const marionIndex   = buildIndex(marionReplies);
+
+
 // Section switching logic
 document.querySelectorAll('.nav-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -1136,28 +1246,16 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
     const container = document.getElementById("cookdine-replies");
     container.innerHTML = "";
   
-    let filtered;
-    if (search.startsWith("!")) {
-      const index = parseInt(search.substring(1)) - 1;
-      filtered = cookdineReplies[index] ? [cookdineReplies[index]] : [];
-    } else {
-      filtered = cookdineReplies.filter(reply =>
-        reply.subject.toLowerCase().includes(search.toLowerCase()) ||
-        reply.message.toLowerCase().includes(search.toLowerCase())
-      );
-    }
+    const list = smartSearch(cookdineIndex, search);
   
-    const sorted = filtered.sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0));
-  
-    sorted.forEach(reply => {
+    list.forEach(reply => {
       const wrapper = document.createElement("div");
       wrapper.className = "reply-block";
-      wrapper.style.position = "relative"; // for the popup
+      wrapper.style.position = "relative";
   
       const realIndex = cookdineReplies.indexOf(reply);
       const title = document.createElement("h4");
       title.textContent = `#${realIndex + 1}: ${reply.subject}`;
-  
       if (reply.pinned) {
         const pin = document.createElement("span");
         pin.textContent = "📌";
@@ -1179,6 +1277,39 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
       attachCopyBehavior(wrapper, reply.message);
     });
   }
+  
+  function renderMarionReplies(search = "") {
+    const container = document.getElementById("marion-replies");
+    container.innerHTML = "";
+  
+    const list = smartSearch(marionIndex, search);
+  
+    list.forEach(reply => {
+      const wrapper = document.createElement("div");
+      wrapper.className = "reply-block";
+      wrapper.style.position = "relative";
+  
+      const realIndex = marionReplies.indexOf(reply);
+      const title = document.createElement("h4");
+      title.textContent = `#${realIndex + 1}: ${reply.subject}`;
+      if (reply.pinned) {
+        const pin = document.createElement("span");
+        pin.textContent = "📌";
+        pin.style.marginRight = "0.5rem";
+        title.prepend(pin);
+      }
+  
+      const body = document.createElement("p");
+      body.textContent = reply.message;
+  
+      wrapper.appendChild(title);
+      wrapper.appendChild(body);
+      container.appendChild(wrapper);
+  
+      attachCopyBehavior(wrapper, reply.message);
+    });
+  }
+  
   
   
   
