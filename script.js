@@ -576,7 +576,106 @@ const cookdineReplies = [
       "subject": "Will they warp over time? I have an expensive well known brand that have done so as they don’t sit flat on the induction hob.",
       "message": "Warping can occur with any pan if it's exposed to concentrated heat, especially on induction cooktops. It’s important to ensure the pan size closely matches the size of the burner or element. This helps distribute heat evenly and prevents warping over time. We also recommend gradually heating the pan, especially on induction. With proper care, our pans are built to stay flat and perform beautifully for years to come.",
       "pinned": false
-    }
+    },
+    {
+      id: "cdh-7000",
+      subject: "How long is the current sale for",
+      message: "We don't have an exact end date for the current sale. We recommend grabbing anything you've got your eye on soon so you don't miss out! - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-7001",
+      subject: "Expensive/save up",
+      message: "If you join our email list on the website, you'll receive a 10% discount code for your first order. It's a great way to save when you're ready to purchase. - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-7002",
+      subject: "What to use to cook steak",
+      message: "For cooking steak indoors, our Mako Carbon Steel Steak Pan is designed specifically for high-heat searing and getting that beautiful crust. Feel free to let us know if you have any further questions 😊 - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-7003",
+      subject: "How to cook with wok",
+      message: "To start cooking with our MAKO Wok, just follow these steps after seasoning your wok. Preheat until it starts to smoke (about 1 minute) (note: don't add oil yet during this step). Then, add a bit of oil, and you're ready to cook. If you have any questions about the product, feel free to reach out. Hope this helps. Here's the link for more info: https://cookdinehost.com/blogs/articles/how-to-cook-with-black-carbon-steel 😊 – Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-7004",
+      subject: "What is MAKO?",
+      message: "MAKO is Marion's own cookware and kitchenware brand. It includes pans, pots, knives, chopping boards and other tools that Marion often uses in her videos. You can check them out at cookdinehost.com if you would like to see more. - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-7005",
+      subject: "What are the benifits of having a lid.",
+      message: "A lid for your wok is really handy. It helps retain heat and moisture, which means you can steam, simmer and braise in your wok as well as stir-fry. It also helps prevent oil splatters while cooking. Many people find it makes their wok even more versatile.",
+      pinned: false
+    },
+    {
+      id: "cdh-7006",
+      subject: "Expensive. Do people really pay that much for a wok",
+      message: "We totally understand your question. Our MAKO woks are crafted from premium carbon steel and designed to last a lifetime when cared for properly. Many people invest in them because of their quality, performance and durability compared to cheaper alternatives.",
+      pinned: false
+    },
+    {
+      id: "cdh-7007",
+      subject: "What's is in PLASMA non-stick",
+      message: "MAKO's signature Plasma non-stick is made using a unique high-speed, high-heat process that creates an extremely hard-wearing cooking surface. This process bonds the non-stick layer to the pan in a way that's much stronger than standard coatings. The result is a highly durable surface that won't lift, chip, or flake like regular non-stick.
+  
+  You can read more about it here:
+  https://cookdinehost.com/blogs/articles/what-makes-mako-non-stick-different",
+      pinned: false
+    },
+    {
+      id: "cdh-7008",
+      subject: "I have purchased some of your chopping boards. Can I chop up hot food on these? Like, can I pull my lamb roast out the oven and slap it on my Sansi for resting and cutting?",
+      message: "Our Sansi chopping board can tolerate temperatures up to 60°C, so it's best to avoid placing super hot food straight from the oven directly onto it. For something like a lamb roast, we'd recommend letting it rest on a heat-safe surface first until it's below that temperature, then transferring it to your Sansi for slicing. That way, your board stays in great condition for years to come.",
+      pinned: false
+    },
+    {
+      id: "cdh-7009",
+      subject: "I can see your non stick product is PFOA free but do they contain and other PFAS?",
+      message: "Our coatings are carefully engineered to meet stringent safety standards. Our MAKO Plasma non-stick is free from PFOA, lead, and cadmium. While we do use PTFE (the material often referred to by the brand name "Teflon"), our Plasma non-stick process bonds it to the base metal in a way that is far more durable. It will never chip or flake, unlike lower-quality non-stick coatings. PFOA is the main chemical of concern in non-stick cookware, and our products do not contain it. When used according to the instructions, our non-stick pans are perfectly safe for everyday cooking.",
+      pinned: false
+    },
+    {
+      id: "cdh-7010",
+      subject: "too expensice",
+      message: "Thank you for your lovely message. You can get 10% off your first order by subscribing to our email list on our website. We'd love for you to enjoy one of our products 😊 - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-7011",
+      subject: "Are the Anaya bowls oven safe stoneware.",
+      message: "The Anaya bowls are not suitable for oven cooking. They can be placed in a low-temperature oven (around 30–50°C) to keep food warm, but we do not recommend using them for high-temperature cooking.",
+      pinned: false
+    },
+    {
+      id: "cdh-7012",
+      subject: "Where can I buy the MAKO wok lid?",
+      message: "you can find the MAKO Wok Lid here: https://cookdinehost.com/products/mako-14-wok-lid It's designed to fit perfectly with the 14\" MAKO Wok. - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-7013",
+      subject: "Hi is the lid for the 30cm non stick frypan fit or work for the black steel 31 cm frypan aswell",
+      message: "The 30cm non-stick frypan lid has been designed specifically for our 30cm non-stick frypan. While it's close in size, we can't guarantee a perfect fit with the 31cm black steel frypan.",
+      pinned: false
+    },
+    {
+      id: "cdh-7014",
+      subject: "Why do these rust",
+      message: "Black carbon steel can sometimes develop rust despite best efforts. This can happen if the pan is exposed to humidity, if it's not cleaned and dried immediately after use, if it isn't re-seasoned regularly, or if water gets trapped when pans are stacked together. We hope that helps! - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-7015",
+      subject: "What oil do you recommend for your chopping boards?",
+      message: "We recommend using a food-grade mineral oil to keep your chopping boards nourished and protected. For best results, apply a thin layer, let it soak in overnight, and wipe off any excess before use.",
+      pinned: false
+    },
   ];
 
   
