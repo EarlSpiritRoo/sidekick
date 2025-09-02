@@ -1026,6 +1026,17 @@ const cookdineReplies = [
       message: "If Shaoxing wine isn't available, dry sherry or mirin makes a great substitute. You can also use apple juice for a non-alcoholic option, or simply leave it out if preferred. - Marion's Team",
       pinned: false
     },
+    {
+      id: "mk-8008",
+      subject: "Marinade Discontinued",
+      message: "Unfortunately, this product has now been discontinued, which is why you’re no longer seeing it at Coles, Woolworths, or other retailers.\n\nWe truly appreciate your enthusiasm for the marinade and understand how disappointing this must be.\n\nFor now, all of our marinades, except for Sticky Chilli Ginger, have been discontinued. The Sticky Chilli Ginger marinade is still available, but only at Woolworths stores.\n\nThank you for being a fan of Marion’s Kitchen, and please don’t hesitate to reach out if you have any other questions.",
+      pinned: false
+    },
+    {
+      id: "mk-8009",
+      subject: "Discontinued massaman curry paste",
+      message: "Thank you for getting in touch.\n\nWe’re very sorry to let you know that the Massaman Curry Paste has been discontinued. We understand this may be disappointing and truly appreciate your support for our products.\n\nHowever, we do have the Massaman Curry Meal Kit available at IGA, Foodland, and FoodWorks. You can find more details here: https://www.marionskitchen.com/food-products/meal-kits/thai-massaman-curry/\n\nIf you have any further questions, please don't hesitate to let us know.",
+    }
   ];
 
 // Section switching logic
