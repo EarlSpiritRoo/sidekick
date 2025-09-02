@@ -622,10 +622,7 @@ const cookdineReplies = [
     {
       id: "cdh-7007",
       subject: "What's is in PLASMA non-stick",
-      message: "MAKO's signature Plasma non-stick is made using a unique high-speed, high-heat process that creates an extremely hard-wearing cooking surface. This process bonds the non-stick layer to the pan in a way that's much stronger than standard coatings. The result is a highly durable surface that won't lift, chip, or flake like regular non-stick.
-  
-  You can read more about it here:
-  https://cookdinehost.com/blogs/articles/what-makes-mako-non-stick-different",
+      message: "MAKO's signature Plasma non-stick is made using a unique high-speed, high-heat process that creates an extremely hard-wearing cooking surface. This process bonds the non-stick layer to the pan in a way that's much stronger than standard coatings. The result is a highly durable surface that won't lift, chip, or flake like regular non-stick. You can read more about it here: https://cookdinehost.com/blogs/articles/what-makes-mako-non-stick-different",
       pinned: false
     },
     {
@@ -637,7 +634,7 @@ const cookdineReplies = [
     {
       id: "cdh-7009",
       subject: "I can see your non stick product is PFOA free but do they contain and other PFAS?",
-      message: "Our coatings are carefully engineered to meet stringent safety standards. Our MAKO Plasma non-stick is free from PFOA, lead, and cadmium. While we do use PTFE (the material often referred to by the brand name "Teflon"), our Plasma non-stick process bonds it to the base metal in a way that is far more durable. It will never chip or flake, unlike lower-quality non-stick coatings. PFOA is the main chemical of concern in non-stick cookware, and our products do not contain it. When used according to the instructions, our non-stick pans are perfectly safe for everyday cooking.",
+      message: "Our coatings are carefully engineered to meet stringent safety standards. Our MAKO Plasma non-stick is free from PFOA, lead, and cadmium. While we do use PTFE (the material often referred to by the brand name 'Teflon'), our Plasma non-stick process bonds it to the base metal in a way that is far more durable. It will never chip or flake, unlike lower-quality non-stick coatings. PFOA is the main chemical of concern in non-stick cookware, and our products do not contain it. When used according to the instructions, our non-stick pans are perfectly safe for everyday cooking.",
       pinned: false
     },
     {
