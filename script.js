@@ -935,7 +935,7 @@ const cookdineReplies = [
     {
       "id": "mk-3029",
       "subject": "Can we buy this red curry sauce online with delivery to Canada?",
-      "message": "Thank you for your interest! At the moment, our food products is only available in Australia. Unfortunately, we don\u2019t offer international shipping, including to Canada, just yet. In the meantime, we have cookbooks and cookware available at https://ca.cookdinehost.com/ Please let us know if there\u2019s anything else we can help with! - Marion's Team",
+      "message": "Thank you for your interest! At the moment, our food products is only available in Australia. Unfortunately, we don\u2019t offer international shipping for our food products, including to Canada, just yet. In the meantime, we have cookbooks and cookware available at https://ca.cookdinehost.com/ Please let us know if there\u2019s anything else we can help with! - Marion's Team",
       "pinned": false
     },
     {
