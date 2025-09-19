@@ -1068,6 +1068,11 @@ const cookdineReplies = [
       id: "mk-8008",
       subject: "Discontinued massaman curry paste",
       message: "Thank you for getting in touch.\n\nWe’re very sorry to let you know that the Massaman Curry Paste has been discontinued. We understand this may be disappointing and truly appreciate your support for our products.\n\nHowever, we do have the Massaman Curry Meal Kit available at IGA, Foodland, and FoodWorks. You can find more details here: https://www.marionskitchen.com/food-products/meal-kits/thai-massaman-curry/\n\nIf you have any further questions, please don't hesitate to let us know.",
+    },
+    {
+      id: "mk-8009",
+      subject: "When are your products coming to SA/ Not available in your country.",
+      message: "Our food products are currently only available in Australia. We’re sorry for the disappointment, but we’ve passed your feedback on to the team. - Marion's Team",
     }
   ];
 
