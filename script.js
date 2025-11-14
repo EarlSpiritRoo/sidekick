@@ -719,7 +719,7 @@ const cookdineReplies = [
     {
       id: "mk-availability-01",
       subject: "Where can I buy your curry paste",
-      message: "Marion’s curry paste is available at both Coles and Woolworths stores across Australia. 😊 Feel free to let us know if you have any trouble finding it! – Marion’s Team",
+      message: "Marion’s curry paste is available at IGA stores across Australia. 😊 Feel free to let us know if you have any trouble finding it! – Marion’s Team",
       pinned: false
     },
     {
