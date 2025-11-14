@@ -724,7 +724,7 @@ const cookdineReplies = [
     {
       id: "mk-availability-01",
       subject: "Where can I buy your curry paste",
-      message: "Marion’s curry paste is available at IGA stores across Australia. 😊 Feel free to let us know if you have any trouble finding it! – Marion’s Team",
+      message: "Marion’s curry paste is available at IGA stores across Australia. 😊 Feel free to let us know if you have any trouble finding it! - Marion’s Team",
       pinned: false
     },
     {
@@ -1083,6 +1083,11 @@ const cookdineReplies = [
       id: "mk-8010",
       subject: "Can we buy in the philippines/singapore",
       message: "We’re so sorry, our food products aren’t available in your country at the moment. However, we do ship our cookbooks there if you’d like to check them out: https://cookdinehost.com/collections/cookbooks - Marion's Team",
+    },
+    {
+      id: "mk-8011",
+      subject: "Never heard of corn flour in the US? Is it corn starch?",
+      message: "Yes, what we call cornflour in Australia is the same as what’s known as cornstarch in the US. - Marion's Team",
     }
   ];
 
