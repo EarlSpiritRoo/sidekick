@@ -1073,6 +1073,11 @@ const cookdineReplies = [
       id: "mk-8009",
       subject: "When are your products coming to SA/ Not available in your country.",
       message: "Our food products are currently only available in Australia. We’re sorry for the disappointment, but we’ve passed your feedback on to the team. - Marion's Team",
+    },
+    {
+      id: "mk-8010",
+      subject: "Can we buy in the philippines/singapore",
+      message: "We’re so sorry, our food products aren’t available in your country at the moment. However, we do ship our cookbooks there if you’d like to check them out: https://cookdinehost.com/collections/cookbooks - Marion's Team",
     }
   ];
 
