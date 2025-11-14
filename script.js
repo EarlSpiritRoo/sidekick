@@ -1165,7 +1165,13 @@ const smartSearch = (index, rawQuery) => {
     // default AND: all terms must be present (order-agnostic)
     let hits = 0;
     for (const t of mustTerms) {
-      if (!tokenHit(tokens, t)) { hits = -1; break; }
+      const inTokens = tokenHit(tokens, t);
+      const inText  = norm.includes(t);   // <-- NEW: substring / partial match
+
+      if (!inTokens && !inText) {        // neither full-word nor partial in text
+        hits = -1;
+        break;
+      }
       hits++;
     }
     if (hits < 0) continue;
