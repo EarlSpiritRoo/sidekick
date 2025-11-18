@@ -1396,5 +1396,33 @@ document.addEventListener('mousemove', (e) => {
   });
 })();
 
+const root = document.documentElement;
+const themeToggle = document.getElementById("theme-toggle");
+
+if (themeToggle) {
+  // Load saved theme if exists
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light" || savedTheme === "dark") {
+    root.setAttribute("data-theme", savedTheme);
+  }
+
+  updateThemeToggleLabel();
+
+  themeToggle.addEventListener("click", () => {
+    const current = root.getAttribute("data-theme") || "dark";
+    const next = current === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+    updateThemeToggleLabel();
+  });
+}
+
+function updateThemeToggleLabel() {
+  const mode = root.getAttribute("data-theme") || "dark";
+  if (!themeToggle) return;
+
+  themeToggle.textContent =
+    mode === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
+}
 
   
