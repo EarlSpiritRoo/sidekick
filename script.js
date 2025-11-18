@@ -1382,7 +1382,7 @@ document.addEventListener('mousemove', (e) => {
   ];
   const pick = () => palette[Math.floor(Math.random() * palette.length)];
 
-  document.querySelectorAll("button:not(.nav-btn)").forEach(btn => {
+  document.querySelectorAll("button:not(.nav-btn):not(#theme-toggle)").forEach(btn => {
     // set an initial color
     btn.style.setProperty("--btn-bg", pick());
 
