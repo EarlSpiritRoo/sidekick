@@ -278,8 +278,7 @@ body {
 }
 
   
-  .brand-mark {
-  /* your existing styles + */
+.brand-mark {
   animation: xmas-glow 2.2s ease-in-out infinite;
 }
 
