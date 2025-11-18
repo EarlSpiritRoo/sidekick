@@ -257,7 +257,7 @@ body {
   color: hsl(calc(330 + (random() * 10)), 100%, 85%);
   font-size: 10px;
   opacity: 0.9;
-  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
+  filter: drop-shadow(0 0 10px rgba(255, 140, 160, 0.9));
   animation-name: snow-fall;
   animation-timing-function: linear;
   animation-iteration-count: 1;
