@@ -1,298 +1,126 @@
+/* ---------- THEME VARIABLES ---------- */
+:root {
+  /* DARK THEME (default) */
+  --bg: #020617;
+  --text: #e5e7eb;
+  --card-bg: #02091a;
+  --border: rgba(148, 163, 184, 0.25);
+  --accent: #ec4899;
+  --accent-soft: rgba(236, 72, 153, 0.12);
+}
+
+:root[data-theme="light"] {
+  /* LIGHT THEME */
+  --bg: #f9fafb;
+  --text: #111827;
+  --card-bg: #ffffff;
+  --border: rgba(148, 163, 184, 0.4);
+  --accent: #db2777;
+  --accent-soft: rgba(219, 39, 119, 0.08);
+}
+
+/* ---------- LAYOUT ---------- */
+
 body {
-    margin: 0;
-    font-family: sans-serif;
-    display: flex;
-    height: 100vh;
-  }
-  
-  .app {
-    display: flex;
-    width: 100%;
-  }
-  
-  .sidebar {
-    width: 220px;
-    background: #f4f4f4;
-    padding: 1rem;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  }
-  
-  .sidebar h1 {
-    font-size: 1.25rem;
-    color: rgb(172, 34, 117);
-  }
-  
-  .nav-btn {
-    display: block;
-    margin-top: 1rem;
-    padding: 0.5rem;
-    width: 100%;
-    text-align: left;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    color: black;
-  }
-  
-  .nav-btn.active {
-    background: gainsboro;
-    border-left: 4px solid black;
-  }
-  
-  .main {
-    flex: 1;
-    padding: 1.5rem;
-    overflow-y: auto;
-  }
-  
-  .section {
-    display: none;
-  }
-  
-  .section.active {
-    display: block;
-  }
-  
-  input[type="text"] {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-  }
-  
-    /* use a CSS variable for background so JS can swap it */
-  button:not(.nav-btn) {
-    padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
-    background: var(--btn-bg, black);
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color .2s ease, transform .1s ease, box-shadow .2s ease;
-  }
-  button:not(.nav-btn):hover   { transform: translateY(-1px); box-shadow: 0 6px 12px rgba(0,0,0,.15); }
-  button:not(.nav-btn):active  { transform: translateY(0);    box-shadow: 0 2px 4px rgba(0,0,0,.2); }
-  button:not(.nav-btn):focus-visible { outline: 3px solid #a855f7; outline-offset: 2px; }
-  
-  
-  #generated-replies div {
-    margin-bottom: 1rem;
-    padding: 0.8rem;
-    background: #ffffff;
-    border-radius: 4px;
-    position: relative;
-    border: 1px solid #ccc;
-  }
-  
-  .copy-btn {
-    align-self: flex-end;
-    background: #333;
-    color: #fff;
-    padding: 0.3rem 0.6rem;
-    font-size: 0.8rem;
-    border: none;
-    cursor: pointer;
-  }
-  
-  
-  .reply-block {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    background: #fff;
-    flex-wrap: wrap;
-  }  
-  
-  
-  .reply-block h4 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1rem;
-    color:rgb(172, 34, 117);
-  }
-  
-  .reply-block p {
-    margin: 0 0 0.5rem 0;
-    white-space: pre-line;
-  }
-
-  
-
-  input[type="text"] {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-
-  .reply-content {
-    flex: 1;
-    min-width: 200px;
-  }
-  
-  .copy-btn {
-    background: #333;
-    color: #fff;
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
-    border: none;
-    cursor: pointer;
-    align-self: flex-start;
-  }
-  
-  /* Make reply cards and generated replies feel clickable */
-  .reply-block,
-  #generated-replies div {
-    cursor: pointer;
-    transition: background-color 160ms ease, box-shadow 160ms ease;
-  }
-
-  .reply-block:hover,
-  #generated-replies div:hover {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  }
-
-  /* Flash after copy */
-  .reply-block.copied,
-  #generated-replies div.copied {
-    background: #ffe6f2; /* light pink */
-  }
-
-  /* Tiny "Copied!" popup */
-  .copied-pop {
-    position: absolute;
-    top: 8px;
-    right: 10px;
-    background: #111;
-    color: #fff;
-    font-size: 12px;
-    padding: 3px 6px;
-    border-radius: 4px;
-    opacity: 0;
-    animation: popfade 1200ms ease forwards;
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  @keyframes popfade {
-    0%   { opacity: 0; transform: translateY(-4px); }
-    10%  { opacity: 1; transform: translateY(0); }
-    80%  { opacity: 1; }
-    100% { opacity: 0; transform: translateY(-4px); }
-  }
-
-
-  .logo {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    margin-right: 8px;
-    display: inline-block;
-    transform: translateY(-2px); 
-  }
-  
-  .nav-btn:hover {
-    background-color: #f3e6f6;
-  }
-  
-  .logo-wrap {
-    display: flex;
-    align-items: center;
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: mediumvioletred;
-  }
-
-
-  #cat-container {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-    z-index: 999;
-    width: 80px;
-    height: 80px;
-  }
-  
-  #cat {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    background: url('catfavicon_flipped.png') no-repeat center/contain;
-  }
-  
-  .pupil {
-    width: 10px;
-    height: 10px;
-    background: black;
-    border-radius: 50%;
-    position: relative;
-    top: 5px;
-    left: 5px;
-    transition: all 0.1s ease;
-  }
-  
-  
-/* Snow overlay */
-.snow-layer {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;        /* don't block clicks */
-  overflow: hidden;
-  z-index: 999;                /* above background, below modals if you ever add them */
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  height: 100vh;
+  background: var(--bg);
+  color: var(--text);
 }
 
-/* Single snowflake */
-.snowflake {
-  position: absolute;
-  top: -10px;
-  color: hsl(calc(330 + (random() * 10)), 100%, 85%);
-  font-size: 10px;
-  opacity: 0.9;
-  filter: drop-shadow(0 0 10px rgba(255, 140, 160, 0.9));
-  animation-name: snow-fall;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
+.app {
+  display: flex;
+  width: 100%;
 }
 
-@keyframes snow-fall {
-  to {
-    transform: translate3d(var(--x-move, 0px), 100vh, 0) rotate(360deg);
-    opacity: 0.1;
-  }
+.sidebar {
+  width: 220px;
+  background: var(--card-bg);
+  padding: 1rem;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.25);
+  border-right: 1px solid var(--border);
 }
 
-/* Optional: only show snow on wider screens so phones don't die */
-@media (max-width: 600px) {
-  .snow-layer {
-    display: none;
-  }
+.main {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  background: var(--bg);
 }
 
-  
-.logo {
-  animation: xmas-glow 2.2s ease-in-out infinite;
+/* ---------- NAV ---------- */
+
+.sidebar h1 {
+  font-size: 1.25rem;
+  color: rgb(172, 34, 117);
 }
 
-@keyframes xmas-glow {
-  0%, 100% {
-    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3));
-    transform: translateY(0);
-  }
-  50% {
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.9));
-    transform: translateY(-1px);
-  }
+.nav-btn {
+  display: block;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--text);
+  border-radius: 6px;
 }
 
+.nav-btn.active {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--accent);
+}
+
+.nav-btn:hover {
+  background-color: #f3e6f6;
+}
+
+/* ---------- SECTIONS ---------- */
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+/* ---------- INPUTS ---------- */
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ---------- BUTTONS ---------- */
+
+/* use a CSS variable for background so JS can swap it */
+button:not(.nav-btn) {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  background: var(--btn-bg, black);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color .2s ease, transform .1s ease, box-shadow .2s ease;
+}
+button:not(.nav-btn):hover   { transform: translateY(-1px); box-shadow: 0 6px 12px rgba(0,0,0,.15); }
+button:not(.nav-btn):active  { transform: translateY(0);    box-shadow: 0 2px 4px rgba(0,0,0,.2); }
+button:not(.nav-btn):focus-visible { outline: 3px solid #a855f7; outline-offset: 2px; }
+
+/* Theme toggle button (top-right) */
 .theme-toggle {
   position: fixed;
   top: 16px;
@@ -322,3 +150,190 @@ body {
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
+/* ---------- REPLIES & CARDS ---------- */
+
+#generated-replies div {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  background: var(--card-bg);
+  border-radius: 4px;
+  position: relative;
+  border: 1px solid var(--border);
+}
+
+.reply-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: var(--card-bg);
+  flex-wrap: wrap;
+}
+
+.reply-block h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  color: rgb(172, 34, 117);
+}
+
+.reply-block p {
+  margin: 0 0 0.5rem 0;
+  white-space: pre-line;
+}
+
+.reply-content {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* tiny "Copied!" popup + states */
+
+.copy-btn {
+  align-self: flex-end;
+  background: #333;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Make reply cards and generated replies feel clickable */
+.reply-block,
+#generated-replies div {
+  cursor: pointer;
+  transition: background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.reply-block:hover,
+#generated-replies div:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Flash after copy */
+.reply-block.copied,
+#generated-replies div.copied {
+  background: #ffe6f2; /* light pink */
+}
+
+/* Tiny "Copied!" popup */
+.copied-pop {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: #111;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  opacity: 0;
+  animation: popfade 1200ms ease forwards;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes popfade {
+  0%   { opacity: 0; transform: translateY(-4px); }
+  10%  { opacity: 1; transform: translateY(0); }
+  80%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-4px); }
+}
+
+/* ---------- LOGO & CAT ---------- */
+
+.logo {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+  display: inline-block;
+  transform: translateY(-2px); 
+  animation: xmas-glow 2.2s ease-in-out infinite;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: mediumvioletred;
+}
+
+#cat-container {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 999;
+  width: 80px;
+  height: 80px;
+}
+
+#cat {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: url('catfavicon_flipped.png') no-repeat center/contain;
+}
+
+.pupil {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  transition: all 0.1s ease;
+}
+
+/* ---------- SNOW ---------- */
+
+.snow-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  font-size: 10px;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 10px rgba(255, 140, 160, 0.9));
+  animation-name: snow-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes snow-fall {
+  to {
+    transform: translate3d(var(--x-move, 0px), 100vh, 0) rotate(360deg);
+    opacity: 0.1;
+  }
+}
+
+/* Optional: only show snow on wider screens so phones don't die */
+@media (max-width: 600px) {
+  .snow-layer {
+    display: none;
+  }
+}
+
+/* ---------- XMAS LOGO GLOW ---------- */
+
+@keyframes xmas-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3));
+    transform: translateY(0);
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.9));
+    transform: translateY(-1px);
+  }
+}
