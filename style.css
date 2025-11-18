@@ -268,14 +268,14 @@ button:not(.nav-btn):focus-visible { outline: 3px solid #a855f7; outline-offset:
   bottom: 10px;
   left: 10px;
   z-index: 999;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
 }
 
 #cat {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   background: url('xmascat.png') no-repeat center/contain;
 }
 
