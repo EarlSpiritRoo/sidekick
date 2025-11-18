@@ -56,5 +56,40 @@
     </div>
   </div>
   </div>
+  <script>
+  (function () {
+    const snowLayer = document.querySelector('.snow-layer');
+    if (!snowLayer) return;
+
+    function createSnowflake() {
+      const flake = document.createElement('div');
+      flake.className = 'snowflake';
+      flake.textContent = '❄';
+
+      const size = 8 + Math.random() * 10;              // 8px–18px
+      const startLeft = Math.random() * 100;            // 0–100% viewport width
+      const drift = (Math.random() - 0.5) * 80;         // -40px to 40px sideways
+      const duration = 6 + Math.random() * 6;           // 6–12s fall
+
+      flake.style.left = startLeft + 'vw';
+      flake.style.fontSize = size + 'px';
+      flake.style.animationDuration = duration + 's';
+      flake.style.setProperty('--x-move', drift + 'px');
+
+      snowLayer.appendChild(flake);
+
+      // Clean up after animation ends
+      setTimeout(() => {
+        flake.remove();
+      }, duration * 1000 + 200);
+    }
+
+    // Spawn flakes periodically
+    const interval = setInterval(createSnowflake, 350); // lower = more snow
+
+    // Safety: stop if user leaves page
+    window.addEventListener('beforeunload', () => clearInterval(interval));
+  })();
+</script>
 </body>
 </html>
