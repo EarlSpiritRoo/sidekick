@@ -1422,7 +1422,7 @@ function updateThemeToggleLabel() {
   if (!themeToggle) return;
 
   themeToggle.textContent =
-    mode === "dark" ? "☀️ Light" : "🌙 Dark;
+    mode === "dark" ? "☀️ Light mode" : "🌙 Dark mode;
 }
 
   
