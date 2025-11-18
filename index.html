@@ -65,6 +65,16 @@
       flake.className = 'snowflake';
       flake.textContent = '❄';
 
+      const pinks = [
+        "rgb(255, 182, 193)",
+        "rgb(255, 160, 175)",
+        "rgb(255, 140, 160)",
+        "rgb(255, 200, 210)"
+      ];
+
+flake.style.color = pinks[Math.floor(Math.random() * pinks.length)];
+
+
       const size = 8 + Math.random() * 10;              // 8px–18px
       const startLeft = Math.random() * 100;            // 0–100% viewport width
       const drift = (Math.random() - 0.5) * 80;         // -40px to 40px sideways
