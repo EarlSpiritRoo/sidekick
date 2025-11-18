@@ -241,5 +241,41 @@ body {
   }
   
   
+/* Snow overlay */
+.snow-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;        /* don't block clicks */
+  overflow: hidden;
+  z-index: 999;                /* above background, below modals if you ever add them */
+}
+
+/* Single snowflake */
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 10px;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
+  animation-name: snow-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes snow-fall {
+  to {
+    transform: translate3d(var(--x-move, 0px), 100vh, 0) rotate(360deg);
+    opacity: 0.1;
+  }
+}
+
+/* Optional: only show snow on wider screens so phones don't die */
+@media (max-width: 600px) {
+  .snow-layer {
+    display: none;
+  }
+}
+
   
   
