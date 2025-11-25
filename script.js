@@ -741,8 +741,8 @@ const cookdineReplies = [
     },
     {
       id: "mk-substitute-01",
-      subject: "What can you use instead of fish sauce?",
-      message: "You could try using soy sauce instead of fish sauce to give you the salty flavour. It will change the character of the dish a little and you’ll need to experiment with how much you add as some soy sauces can be more or less salty than fish sauce. Hope that helps! - Marion's Team",
+      subject: "Please ship these to US/USA/America",
+      message: "Thank you for your interest! Unfortunately, our food range are no longer available in the USA. We’re truly sorry for the inconvenience, and we do hope to bring our products back for our US customers in the future. In the meantime, if you’d like to cook along with Marion, we have a range of her cookbooks available here: https://us.cookdinehost.com/ Thank you again for your support 😊 - Marion's Team",
       pinned: false
     },
     {
