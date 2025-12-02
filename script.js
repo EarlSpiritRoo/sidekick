@@ -710,10 +710,17 @@ const cookdineReplies = [
       subject: "What oil do you recommend for your chopping boards?",
       message: "We recommend using a food-grade mineral oil to keep your chopping boards nourished and protected. For best results, apply a thin layer, let it soak in overnight, and wipe off any excess before use.",
       pinned: false
-    },{
+    },
+    {
       id: "cdh-7016",
       subject: "What's the difference between the steak and the sear pan",
       message: "The Steak Pan is larger and designed for cooking full-sized steaks or multiple portions at once, while the Mini Sear Pan is smaller and perfect for searing single portions, smaller cuts of meat, or sides. Both are made from the same Black Steel material and season over time to develop a natural non-stick surface. It really comes down to the size you prefer.",
+      pinned: false
+    },
+    {
+      id: "cdh-701y",
+      subject: "Can we use black steel/ steak pan on bbq?",
+      message: "Yes, you can use your MAKO Black Steel Steak Pan on the BBQ. Black steel is super durable. Just be sure to avoid leaving it dirty or wet afterward, as that can cause rust. Give it a quick clean and re-season if needed to keep it in top shape for your next cook-up! 🔥 - Marion's Team",
       pinned: false
     }
   ];
