@@ -718,9 +718,15 @@ const cookdineReplies = [
       pinned: false
     },
     {
-      id: "cdh-701y",
+      id: "cdh-7017",
       subject: "Can we use black steel/ steak pan on bbq?",
       message: "Yes, you can use your MAKO Black Steel Steak Pan on the BBQ. Black steel is super durable. Just be sure to avoid leaving it dirty or wet afterward, as that can cause rust. Give it a quick clean and re-season if needed to keep it in top shape for your next cook-up! 🔥 - Marion's Team",
+      pinned: false
+    },
+    {
+      id: "cdh-7018",
+      subject: "Microplastics in chopping board",
+      message: "Our chopping boards are made from 100% recycled plastic that’s food-safe, BPA-free, and tested to ensure they don’t leach harmful chemicals or microplastics when used as intended. - Marion's Team",
       pinned: false
     }
   ];
