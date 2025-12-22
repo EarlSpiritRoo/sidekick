@@ -337,3 +337,23 @@ button:not(.nav-btn):focus-visible { outline: 3px solid #a855f7; outline-offset:
     transform: translateY(-1px);
   }
 }
+
+.nav-btn:hover,
+.nav-btn:focus-visible {
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+:root:not([data-theme="light"]) .nav-btn:hover,
+:root:not([data-theme="light"]) .nav-btn:focus-visible {
+  background: rgba(236, 72, 153, 0.18);
+}
+
+.nav-btn:hover {
+  background-color: #f3e6f6;
+  color: #111827; /* force readable text */
+}
+
+
+
+
