@@ -76,9 +76,6 @@ body {
   border-left: 4px solid var(--accent);
 }
 
-.nav-btn:hover {
-  background-color: #f3e6f6;
-}
 
 /* ---------- SECTIONS ---------- */
 
@@ -349,6 +346,20 @@ button:not(.nav-btn):focus-visible { outline: 3px solid #a855f7; outline-offset:
   background: rgba(236, 72, 153, 0.18);
 }
 
+/* Improve readability on light/pink cards */
+.reply-block.copied,
+#generated-replies div.copied {
+  background: #ffe6f2;
+  color: #3b0a2a;
+}
+
+.reply-block.copied h4 {
+  color: #9d174d;
+}
+
+.reply-block.copied p {
+  color: #3b0a2a;
+}
 
 
 
